@@ -5,7 +5,7 @@ import { serveStatic } from "hono/bun";
 
 const app = new Hono();
 
-const API_KEY = Bun.env.OPENWEATHER_API_KEY || 'e3f793ead69dd1bdc588b790a74aef77';
+const API_KEY = Bun.env.OPENWEATHER_API_KEY;
 
 // ✅ Serve dist CSS (Tailwind output)
 app.use('/dist/*', serveStatic({ root: './' }));
@@ -62,8 +62,7 @@ app.post("/api/weathergeo", async (c) => {
 });
 
 Bun.serve({
-    port: 8000,                   // Specify your desired port
-    hostname: '127.0.0.1',          // Optional: specify the hostname explicitly
+    port: Bun.env.PORT,                   // Specify your desired port
     fetch: app.fetch,
     error(error) {
       return new Response(`Error: ${error.message}`, { status: 500 });
