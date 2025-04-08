@@ -62,11 +62,10 @@ app.post("/api/weathergeo", async (c) => {
 });
 
 Bun.serve({
-    port: 3000,                   // Specify your desired port
+    port: 8000,                   // Specify your desired port
     hostname: '127.0.0.1',          // Optional: specify the hostname explicitly
     fetch: app.fetch,
     error(error) {
       return new Response(`Error: ${error.message}`, { status: 500 });
     }
   });
-  
