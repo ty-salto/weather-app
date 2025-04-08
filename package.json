@@ -16,8 +16,8 @@
     "hono": "^4.7.5"
   },
   "scripts": {
-    "build": "tailwindcss -i ./public/css/styles.css -o ./dist/styles.css --watch",
-    "start": "bun run src/server.ts",
-    "dev": "bun --hot src/server.ts"
+    "build": "tailwindcss -i ./public/css/styles.css -o ./dist/styles.css && bun build public/ts/weather.ts --outdir dist --target browser",
+    "start": "bun run build && bun run server.ts",
+    "dev": "bun --hot server.ts"
   }
 }
