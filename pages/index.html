@@ -1,72 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
-  <title>Your Page Title</title>
-  <link rel="stylesheet" href="/dist/styles.css" />
-  <!-- Add any other external resources here -->
-  <script src="/dist/weather.js" defer></script>
-</head>
-<!-- <body class="bg-gray-800 text-white font-sans p-10 text-center">
-  <header>
-    <h1>Welcome to My Website</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <!-- Add any other external resources here -->
+    <script src="/dist/country.js" defer></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex items-center justify-center"
+  >
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
+      <h1 class="text-3xl font-bold mb-6 text-gray-800">🌤️ Weather App</h1>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+      <form action="/weather" method="post" id="country-form">
+        <input
+          type="submit"
+          value="Select Country"
+          id="selectCountryBtn"
+          class="w-full bg-blue-500 text-white py-3 rounded-lg mb-2 hover:bg-blue-600 transition"
+        />
+      </form>
+      </button>
 
-  <main>
-    <section>
-      <h2>Main Content</h2>
-      <p>This is your main content area.</p>
-    </section>
-  </main>
+      <div id="loading" class="hidden mt-4 text-gray-500 animate-pulse">
+        Loading...
+      </div>
 
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body> -->
-
-<!-- <body class="bg-gray-800 text-white font-sans p-8 text-center">
-  <h1 class="text-4xl font-bold text-blue-500">Hello Tailwind!</h1>
-  <img src="public/images/image.png">
-</body> -->
-
-<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex items-center justify-center">
-
-  <div class="bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
-    <h1 class="text-3xl font-bold mb-6 text-gray-800">🌤️ Weather App</h1>
-
-    <form action="" id="weather-form">
-      <input type="text" id="cityInput" 
-      class="w-full p-3 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" 
-      placeholder="Enter city name...">
-      <!-- <input type="text" id="countryInput" 
-      class="w-full p-3 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" 
-      placeholder="Enter Country.."> -->
-
-      <input type="submit" value="Get Weather" id="getWeatherBtn" 
-            class="w-full bg-blue-500 text-white py-3 rounded-lg mb-2 hover:bg-blue-600 transition">
-    </form>
-    <button id="getLocationBtn" 
-      class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition">
-      📍 Use Current Location
-    </button>
-
-    <div id="loading" class="hidden mt-4 text-gray-500 animate-pulse">Loading...</div>
-
-    <div id="weatherDisplay" class="mt-6"></div>
-  </div>
-
-
-</body>
+      <div id="weatherDisplay" class="mt-6"></div>
+    </div>
+  </body>
 </html>

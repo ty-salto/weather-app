@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="/dist/styles.css" />
+    <!-- Add any other external resources here -->
+    <script src="/dist/weather.js" defer></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex items-center justify-center"
+  >
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-96 text-center">
+      <h1 class="text-3xl font-bold mb-6 text-gray-800">🌤️ Weather App</h1>
+
+      <form action="" id="weather-form">
+        <input
+          type="text"
+          id="cityInput"
+          class="w-full p-3 rounded-lg border border-gray-300 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          placeholder="Enter city name..."
+          required
+        />
+        <input
+          type="submit"
+          value="Get Weather"
+          id="getWeatherBtn"
+          class="w-full bg-blue-500 text-white py-3 rounded-lg mb-2 hover:bg-blue-600 transition"
+        />
+      </form>
+      <button
+        id="getLocationBtn"
+        class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition"
+      >
+        📍 Use Current Location
+      </button>
+
+      <div id="loading" class="hidden mt-4 text-gray-500 animate-pulse">
+        Loading...
+      </div>
+
+      <div id="weatherDisplay" class="mb-2"></div>
+      <form action="/" method="get" id="back-btton">
+        <input
+          type="submit"
+          value="🔙 Back"
+          id="back button"
+          class="w-full bg-blue-500 text-white py-3 rounded-lg mb-2 hover:bg-blue-600 transition"
+        />
+      </form>
+    </div>
+  </body>
+</html>
